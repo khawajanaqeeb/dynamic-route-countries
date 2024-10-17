@@ -1,27 +1,43 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, sans-serif;
+  margin: 5;
+  padding: 20px;
+  background-color: #434141;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+h1 {
+  color: #5a5a5a;
+}
+
+ul {
+  list-style-type: none;
+  padding: 1;
+}
+
+li {
+  margin: 10px 0;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(231, 198, 120);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+p {
+  color: #cbd56a;
+}
+
+/* Add blinking effect for the country names */
+.blinking {
+  animation: blinkingText 1.5s infinite;
+}
+
+@keyframes blinkingText {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
 }
